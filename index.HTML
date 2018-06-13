@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Cilia</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-menu-hamburger" onclick="openNav()"></span>
+                </a>
+                <ul>
+                    <li>
+                        <span href="#" class="navbar-left">
+                            <img class="cilia-logo" src="images/logos/cilia-logo.svg" alt="cilia logo top">
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-question-sign"></span> Ajuda </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-comment"></span> Suporte via chat</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span class="glyphicon glyphicon-home"></span>
+                            Diego - Auto/RE - TESTE
+                            <p align="right">Administrador
+                                <span class="caret"></span>
+                            </p>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-menu-link" href="#">Meu perfil</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-link" href="#">Configurações</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-link" href="#">Sair</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <span href="#">
+            <img class="blue-logo" src="images/logos/cilia-logo-blue.svg" alt="cilia logo menu">
+        </span>
+        <a href="#">
+            <span class="material-icons">dashboard</span> Dashboard </a>
+        </a>
+        <a href="#">
+            <span class="material-icons">perm_phone_msg</span> Atendimento </a>
+        </a>
+        <a href="#">
+            <span class="material-icons">av_timer</span> Reparos </a>
+        </a>
+        <a href="#">
+            <span class="material-icons">time_to_leave</span> Carros Reserva </a>
+        </a>
+        <a href="#">
+            <span class="material-icons">build</span> Oficinas </a>
+        </a>
+        <a href="#">
+            <span class="material-icons">people</span> Usuários </a>
+        </a>
+        <a href="#">
+            <span class="material-icons">folder_shared</span> Grupos </a>
+        </a>
+        <a href="#">
+            <span class="material-icons">create_new_folder</span> Permissão </a>
+        </a>
+        <a href="#">
+            <span class="material-icons">settings</span> Configurações </a>
+        </a>
+    </div>
+    <div>
+        <span>
+            <i class="user-location"> INICIO </i> >
+            <i class="user-location-current"> PÁGINA TESTE</i>
+        </span>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="material-icons">build</span>
+                        <i class="title-menus-down"> Montadoras</i>
+                    </div>
+                    <div class="panel-body">
+                        <!--começo do gráfico-->
+                        <canvas class="line-chart"></canvas>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+                        <script>
+                            var ctx = document.getElementsByClassName("line-chart");
+                            var chartGraph = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: ["BMW", "Chevrolet", "Citroen", "Fiat", "Ford", "Honda", "Hyundai",
+                                        "Iveco", "Jeep",
+                                        "Renault"
+                                    ],
+                                    datasets: [{
+                                            label: "Maiores Vendas - 2017",
+                                            data: [5, 3, 4, 9, 6, 9, 7, 6, 3, 4],
+                                            borderWidth: 3,
+                                            borderColor: 'rgba(77,166,253,0.85)',
+                                            backgroundColor: 'rgba(77,166,253,0.10)',
+                                        },
+                                        {
+                                            label: "Maiores Vendas - 2018",
+                                            data: [1, 7, 2, 5, 9, 6, 7, 8, 6, 3],
+                                            borderWidth: 3,
+                                            borderColor: 'rgba(6,204,6,0.85)',
+                                            backgroundColor: 'rgba(6,204,6,0.10)',
+                                        }
+                                    ]
+                                }
+                            })
+                        </script>
+                        <!--Final do gráfico-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="material-icons">time_to_leave</span>
+                        <i class="title-menus-down"> Veículos</i>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-info">
+                                <img class="volks-logo" src="images/logos/volks-logo.svg" alt="volks-logo"> VOLKVAGEM POLO (2018) CONFORTLINE 200 TSI 2018</li>
+                            <li class="list-group-item">
+                                <img class="volks-logo" src="images/logos/volks-logo.svg" alt="volks-logo"> VOLKVAGEM POLO (2018) CONFORTLINE 200 TSI 2018</li>
+                            <li class="list-group-item list-group-item-info">
+                                <img class="volks-logo" src="images/logos/volks-logo.svg" alt="volks-logo"> VOLKVAGEM POLO (2018) CONFORTLINE 200 TSI 2018</li>
+                            <li class="list-group-item">
+                                <img class="volks-logo" src="images/logos/volks-logo.svg" alt="volks-logo"> VOLKVAGEM POLO (2018) CONFORTLINE 200 TSI 2018</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="material-icons">place</span>
+                        <i class="title-menus-down"> Localização</i>
+                    </div>
+                    <div class="panel-body">
+                        <div class="map-responsive">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15287.329142921102!2d-49.263559!3d-16.685274!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x616a06459c0a17c8!2sCilia+Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1528864398091"
+                                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
