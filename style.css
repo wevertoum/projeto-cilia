@@ -1,161 +1,174 @@
 .body {
-  background-color: #f1f4f6;
+    background-color: #f1f4f6;
 }
 
 .container-fluid {
-  height: 80px;
-  background-color: #29b6ff;
+    height: 80px;
+    background-color: #29b6ff;
 }
 
 .top-menu {
-  height: 60px;
+    height: 60px;
 }
 
 .logo {
-  height: 30px;
-  float: left;
+    height: 30px;
+    float: left;
 }
 
 .nav>li>a:focus,
 .nav>li>a:hover {
-  text-decoration: none;
-  background-color: transparent !important;
+    text-decoration: none;
+    background-color: transparent !important;
 }
 
 .navbar-inverse {
-  border-color: transparent !important;
-  background-color: transparent !important;
+    border-color: transparent !important;
+    background-color: transparent !important;
 }
 
 .navbar-inverse:hover,
 .navbar-inverse:focus {
-  border-color: transparent !important;
-  background-color: transparent !important;
+    border-color: transparent !important;
+    background-color: transparent !important;
 }
 
 .nav.navbar-nav.navbar-right li a {
-  color: #ffffff;
-  background-color: #29b6ff;
+    color: #ffffff;
+    background-color: #29b6ff;
 }
 
-.cilia-logo {
-  height: 35px;
-  margin-top: 19px;
+.navbar-collapse {
+    background-color: #29b6ff;
 }
 
-/*talvez um z index aq nessa collapse*/
-.navbar-collapse {   
-  background-color: #29b6ff;
+.navbar-collapse a {
+    background-color: black;
 }
 
-.navbar-collapse a {   
-  background-color: black;
-}
-
-.navbar-collapse a:hover {   
-  background-color: none;
-}
-
-.dropdown .dropdown-menu {
-  background-color: #29b6ff;
-  }
-
-ul {
-  list-style-type: none;
+.navbar-collapse a:hover {
+    background-color: none;
 }
 
 .navbar-brand {
-  margin-top: 14px;
+    margin-top: 14px;
+    color: #ffffff;
+}
+
+.dropdown {
+    background-color: #29b6ff;
+}
+
+.dropdown-menu {
+    background-color: #29b6ff;
+    z-index: 9999;
+    position: absolute;
+}
+
+.dropdown-menu li>a {
   color: #ffffff;
+}
+
+.cilia-logo {
+    height: 35px;
+    margin-top: 19px;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .glyphicon-menu-hamburger {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #ffffff;
-  overflow-x: hidden;
-  padding-top: 60px;
-  transition: 0.5s;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #29b6ff;
-  background-color: #ffffff;
-  display: block;
-  transition: 0.3s;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #29b6ff;
+    background-color: #ffffff;
+    display: block;
+    transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+    color: #f1f1f1;
 }
 
 .sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
 }
 
 .blue-logo {
-  height: 30px;
-  margin-left: 13%;
-  margin-bottom: 15%;
+    height: 30px;
+    margin-left: 13%;
+    margin-bottom: 15%;
 }
 
 .user-location {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 .title-menus-down {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 .volks-logo {
-  height: 40px;
+    height: 40px;
 }
 
 .map-responsive {
-  overflow: hidden;
-  padding-bottom: 50%;
-  position: relative;
-  height: 0;
+    overflow: hidden;
+    padding-bottom: 50%;
+    position: relative;
+    height: 0;
 }
 
 .map-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 .wrapper {
-  min-height: 100%;
-  margin-bottom: -50px;
+    min-height: 100%;
+    margin-bottom: -50px;
 }
 
 .footer,
 .push {
-  height: 50px;
+    height: 50px;
+}
+
+.panel-default {
+    z-index: 0;
 }

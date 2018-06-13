@@ -15,11 +15,13 @@
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
             document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            document.getElementById("myDIV").style.opacity = "0.3";
+            
         }
-
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
             document.body.style.backgroundColor = "white";
+            document.getElementById("myDIV").style.opacity = "1";
         }
     </script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -46,7 +48,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="collapse navbar-collapse" id="myNavbar" style="z-index: 9999 !important">
                 <ul class="nav navbar-nav">
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -58,7 +60,7 @@
                         <a href="#">
                             <span class="glyphicon glyphicon-comment"></span> Suporte via chat</a>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown" style="z-index: 9999">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             <span class="glyphicon glyphicon-user"></span>
                             <span class="glyphicon glyphicon-home"></span>
@@ -123,7 +125,8 @@
         </span>
     </div>
     <br>
-    <div class="container">
+    <br>
+    <div class="container" id="myDIV">
         <div class="row">
             <div class="col-sm-12">
                 <div class="panel panel-default">
@@ -146,18 +149,11 @@
                                     ],
                                     datasets: [{
                                             label: "Maiores Vendas - 2017",
-                                            data: [5, 3, 4, 9, 6, 9, 7, 6, 3, 4],
+                                            data: [1, 2, 3, 2, 3, 2, 3, 2, 4, 3],
                                             borderWidth: 3,
                                             borderColor: 'rgba(77,166,253,0.85)',
                                             backgroundColor: 'rgba(77,166,253,0.10)',
                                         },
-                                        {
-                                            label: "Maiores Vendas - 2018",
-                                            data: [1, 7, 2, 5, 9, 6, 7, 8, 6, 3],
-                                            borderWidth: 3,
-                                            borderColor: 'rgba(6,204,6,0.85)',
-                                            backgroundColor: 'rgba(6,204,6,0.10)',
-                                        }
                                     ]
                                 }
                             })
